@@ -49,11 +49,12 @@ public interface Constant {
     int PAGE_SIZE = 20;
 
     // String Constant
-    String DYNAMIC_SAME_STATE = "state";
+    String BASE_URL = "https://newsapi.org/";
     String COUNTRY_CODE = "in";
     String ARTICLE_BUNDLE_KEY = "article";
     String DATABASE_NAME = "news_article_database";
     String NA = "NA";
     String API_KEY = "apiKey";
+    String API_KEY_VALUE = "1670eb439dee4c58820183f5af84e7b8";
 
 }

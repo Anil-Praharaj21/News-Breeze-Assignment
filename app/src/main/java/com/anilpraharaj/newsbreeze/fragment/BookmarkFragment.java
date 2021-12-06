@@ -1,5 +1,6 @@
 package com.anilpraharaj.newsbreeze.fragment;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.anilpraharaj.newsbreeze.activity.MainActivity;
 import com.anilpraharaj.newsbreeze.adapter.BookmarkAdapter;
+import com.anilpraharaj.newsbreeze.baseClass.BaseActivity;
 import com.anilpraharaj.newsbreeze.baseClass.BaseFragment;
+import com.anilpraharaj.newsbreeze.callback.AdapterItemOnClickCb;
 import com.anilpraharaj.newsbreeze.constant.Constant;
+import com.anilpraharaj.newsbreeze.entity.Article;
 import com.anilpraharaj.newsbreeze.entity.BookmarkArticle;
 import com.anilpraharaj.newsbreeze.viewModel.ArticleViewModel;
 import com.google.android.material.button.MaterialButton;
@@ -20,7 +24,7 @@ import java.util.ArrayList;
 /**
  * @author anilpraharaj on 05/12/21
  */
-public class BookmarkFragment extends BaseFragment {
+public class BookmarkFragment extends BaseFragment implements AdapterItemOnClickCb {
 
     private ArticleViewModel articleViewModel;
 
@@ -51,7 +55,7 @@ public class BookmarkFragment extends BaseFragment {
 
         articleViewModel.getBookmarks().observe(this, bookmarkArticles -> {
             if (bookmarkArticles != null && bookmarkArticles.size() > 0) {
-                bookmarkAdapter.setmBookmarkArrayList((ArrayList<BookmarkArticle>) bookmarkArticles);
+                bookmarkAdapter.setmBookmarkArrayList((ArrayList<BookmarkArticle>) bookmarkArticles, this::onClickListener);
                 noDataFound.setVisibility(View.GONE);
             } else {
                 noDataFound.setVisibility(View.VISIBLE);
@@ -84,5 +88,14 @@ public class BookmarkFragment extends BaseFragment {
     @Override
     protected boolean onBackPressed() {
         return true;
+    }
+
+    @Override
+    public void onClickListener(Article article) {
+        BaseFragment fragment = new ArticleDetailsFragment();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(Constant.ARTICLE_BUNDLE_KEY, article);
+        fragment.setArguments(bundle);
+        ((BaseActivity) getActivity()).loadFragment(Constant.BASE_CONTAINER_ID, fragment, ArticleDetailsFragment.class.getSimpleName());
     }
 }

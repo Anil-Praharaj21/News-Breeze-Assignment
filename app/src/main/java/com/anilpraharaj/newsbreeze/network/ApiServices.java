@@ -3,6 +3,7 @@ package com.anilpraharaj.newsbreeze.network;
 import android.content.Context;
 
 import com.anilpraharaj.newsbreeze.NewsBreezeApplication;
+import com.anilpraharaj.newsbreeze.R;
 import com.anilpraharaj.newsbreeze.constant.Constant;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,7 +47,7 @@ public class ApiServices {
                     HttpUrl originalHttpUrl = original.url();
 
                     HttpUrl url = originalHttpUrl.newBuilder()
-                            .addQueryParameter(Constant.API_KEY, "1670eb439dee4c58820183f5af84e7b8")
+                            .addQueryParameter(Constant.API_KEY, Constant.API_KEY_VALUE)
                             .build();
 
                     Request.Builder requestBuilder = original.newBuilder()
@@ -59,7 +60,7 @@ public class ApiServices {
             });
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://newsapi.org/")
+                    .baseUrl(Constant.BASE_URL)
                     .client(httpClient.build())
                     .addConverterFactory(GsonConverterFactory.create(getGson()))
                     .build();

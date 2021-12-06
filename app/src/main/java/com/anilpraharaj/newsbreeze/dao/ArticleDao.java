@@ -22,7 +22,7 @@ public interface ArticleDao {
     LiveData<List<Article>> getAll();
 
     @Query("SELECT * FROM Article WHERE title LIKE :search")
-    LiveData<List<Article>> getArticleByText(String search);
+    Article getArticleByText(String search);
 
     @Insert
     void insert(Article article);

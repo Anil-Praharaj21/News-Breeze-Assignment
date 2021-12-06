@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.anilpraharaj.newsbreeze.R;
+import com.anilpraharaj.newsbreeze.callback.AdapterItemOnClickCb;
 import com.anilpraharaj.newsbreeze.constant.Constant;
+import com.anilpraharaj.newsbreeze.entity.Article;
 import com.anilpraharaj.newsbreeze.entity.BookmarkArticle;
 import com.anilpraharaj.newsbreeze.utils.DateFormatter;
 import com.bumptech.glide.Glide;
@@ -23,13 +25,15 @@ import java.util.ArrayList;
 public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder> {
 
     private ArrayList<BookmarkArticle> mBookmarkArrayList;
+    private AdapterItemOnClickCb mItemOnClickCb;
 
     public BookmarkAdapter() {
         this.mBookmarkArrayList = new ArrayList<>();
     }
 
-    public void setmBookmarkArrayList(ArrayList<BookmarkArticle> mBookmarkArrayList) {
+    public void setmBookmarkArrayList(ArrayList<BookmarkArticle> mBookmarkArrayList, AdapterItemOnClickCb itemOnClickCb) {
         this.mBookmarkArrayList = mBookmarkArrayList;
+        this.mItemOnClickCb = itemOnClickCb;
         notifyDataSetChanged();
     }
 
@@ -52,7 +56,25 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.Bookma
 
             holder.bookmarkTitle.setText("#" + (bookmarkArticle.getSource().id != null ? bookmarkArticle.getSource().id : "NA"));
             holder.bookmarkDescription.setText(bookmarkArticle.getDescription());
-            holder.bookmarkDate.setText(new DateFormatter(bookmarkArticle.getPublishedAt(), DateFormatter.DEFAULT_FORMAT).format("dd-MM-yy") + " . " + (bookmarkArticle.getAuthor() != null ? bookmarkArticle.getAuthor() : "NA"));
+            holder.bookmarkDate.setText(new DateFormatter(bookmarkArticle.getPublishedAt(),
+                    DateFormatter.DEFAULT_FORMAT)
+                    .format("dd-MM-yy") + " . " + (bookmarkArticle.getAuthor() != null ? bookmarkArticle.getAuthor() : "NA"));
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Article article = new Article(bookmarkArticle.getUid(),
+                            bookmarkArticle.getAuthor(),
+                            bookmarkArticle.getSource(),
+                            bookmarkArticle.getTitle(),
+                            bookmarkArticle.getDescription(),
+                            bookmarkArticle.getUrl(),
+                            bookmarkArticle.getUrlToImage(),
+                            bookmarkArticle.getPublishedAt(),
+                            bookmarkArticle.getContent(),
+                            true);
+                    mItemOnClickCb.onClickListener(article);
+                }
+            });
         }
     }
 

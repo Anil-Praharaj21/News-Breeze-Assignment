@@ -80,7 +80,9 @@ public class NewsBreezeRepository {
 
     public void addRemoveBookmark(Article article) {
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            mArticleDao.update(article);
+            if (mArticleDao.getArticleByText(article.getTitle()) != null) {
+                mArticleDao.update(mArticleDao.getArticleByText(article.getTitle()));
+            }
 
             if (article.isBookmarked()) {
                 BookmarkArticle bookmarkArticle = new BookmarkArticle(article.getAuthor(), article.getSource(), article.getTitle(), article.getDescription(), article.getUrl(), article.getUrlToImage(), article.getPublishedAt(), article.getContent(), 0);
