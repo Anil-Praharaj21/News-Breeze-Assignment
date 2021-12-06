@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.NewsBreeze.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/robotoslab_light</item>
+        <item name="android:fontFamily">@font/robotoslab_light</item>
+        <item name="android:textSize">@dimen/text_size_h1</item>
+    </style>
+
+    <!-- Headline 2 Text Style -->
+    <style name="Theme.NewsBreeze.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/robotoslab_light</item>
+        <item name="android:fontFamily">@font/robotoslab_light</item>
+        <item name="android:textSize">@dimen/text_size_h2</item>
+    </style>
+
+    <!-- Headline 3 Text Style -->
+    <style name="Theme.NewsBreeze.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_h3</item>
+    </style>
+
+    <!-- Headline 4 Text Style -->
+    <style name="Theme.NewsBreeze.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_h4</item>
+    </style>
+
+    <!-- Headline 5 Text Style -->
+    <style name="Theme.NewsBreeze.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/robotoslab_bold</item>
+        <item name="android:fontFamily">@font/robotoslab_bold</item>
+        <item name="android:textSize">@dimen/text_size_h5</item>
+    </style>
+
+    <!-- Headline 6 Text Style -->
+    <style name="Theme.NewsBreeze.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/robotoslab_medium</item>
+        <item name="android:fontFamily">@font/robotoslab_medium</item>
+        <item name="android:textSize">@dimen/text_size_h6</item>
+    </style>
+
+    <!-- Subtitle 1 Text Style -->
+    <style name="Theme.NewsBreeze.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_subtitle1</item>
+    </style>
+
+    <!-- Subtitle 2 Text Style -->
+    <style name="Theme.NewsBreeze.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/robotoslab_medium</item>
+        <item name="android:fontFamily">@font/robotoslab_medium</item>
+        <item name="android:textSize">@dimen/text_size_subtitle2</item>
+    </style>
+
+    <!-- Body 1 Text Style -->
+    <style name="Theme.NewsBreeze.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_subtitle1</item>
+    </style>
+
+    <!-- Body 2 Text Style -->
+    <style name="Theme.NewsBreeze.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_subtitle2</item>
+    </style>
+
+    <!-- Button Text Style -->
+    <style name="Theme.NewsBreeze.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/robotoslab_medium</item>
+        <item name="android:fontFamily">@font/robotoslab_medium</item>
+        <item name="android:textSize">@dimen/text_size_subtitle2</item>
+    </style>
+
+    <!-- Caption Text Style -->
+    <style name="Theme.NewsBreeze.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_caption</item>
+    </style>
+
+    <!-- Overline Text Style -->
+    <style name="Theme.NewsBreeze.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/robotoslab_regular</item>
+        <item name="android:fontFamily">@font/robotoslab_regular</item>
+        <item name="android:textSize">@dimen/text_size_overline</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Icon Text Style -->
+    <style name="Theme.NewsBreeze.IconText" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/rye_regular</item>
+        <item name="android:fontFamily">@font/rye_regular</item>
+        <item name="android:textSize">@dimen/text_size_h5</item>
+    </style>
+
+    <!-- Icon Button Style -->
+    <style name="Theme.NewsBreeze.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">@dimen/size_0dp</item>
+        <item name="android:insetTop">@dimen/size_0dp</item>
+        <item name="android:insetBottom">@dimen/size_0dp</item>
+        <item name="android:paddingLeft">@dimen/size_12dp</item>
+        <item name="android:paddingRight">@dimen/size_12dp</item>
+        <item name="android:minWidth">@dimen/size_38dp</item>
+        <item name="android:minHeight">@dimen/size_38dp</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="iconTint">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="Theme.NewsBreeze.BackButtonIcon" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">@dimen/size_0dp</item>
+        <item name="android:insetTop">@dimen/size_0dp</item>
+        <item name="android:insetBottom">@dimen/size_0dp</item>
+        <item name="android:paddingLeft">@dimen/size_12dp</item>
+        <item name="android:paddingRight">@dimen/size_0dp</item>
+        <item name="android:minWidth">@dimen/size_42dp</item>
+        <item name="android:minHeight">@dimen/size_42dp</item>
+    </style>
+
+    <style name="Theme.NewsBreeze.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_height">@dimen/size_50dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/size_12dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/size_12dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/size_12dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/size_12dp</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--*******************************************************************************-->
+<!--    * © 2021 Copyright Aayamya Tech.                                           -->
+<!--    *                                                                          -->
+<!--*******************************************************************************-->
+<resources>
+    <dimen name="size_0dp">0dp</dimen>
+    <dimen name="size_4dp">4dp</dimen>
+    <dimen name="size_8dp">8dp</dimen>
+    <dimen name="size_12dp">12dp</dimen>
+    <dimen name="size_16dp">16dp</dimen>
+    <dimen name="size_24dp">24dp</dimen>
+    <dimen name="size_28dp">28dp</dimen>
+    <dimen name="size_32dp">32dp</dimen>
+    <dimen name="size_38dp">38dp</dimen>
+    <dimen name="size_42dp">42dp</dimen>
+    <dimen name="size_50dp">50dp</dimen>
+    <dimen name="size_100dp">100dp</dimen>
+    <dimen name="size_150dp">150dp</dimen>
+    <dimen name="size_200dp">200dp</dimen>
+    <dimen name="size_300dp">300dp</dimen>
+
+    <dimen name="text_size_h1">96sp</dimen>
+    <dimen name="text_size_h2">60sp</dimen>
+    <dimen name="text_size_h3">48sp</dimen>
+    <dimen name="text_size_h4">34sp</dimen>
+    <dimen name="text_size_h5">24sp</dimen>
+    <dimen name="text_size_h6">20sp</dimen>
+    <dimen name="text_size_subtitle1">16sp</dimen>
+    <dimen name="text_size_subtitle2">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_overline">10sp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--*******************************************************************************-->
+<!--    * © 2021 Copyright Aayamya Tech.                                           -->
+<!--    *                                                                          -->
+<!--*******************************************************************************-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_baseline_bookmark_border_24"
+        android:state_checked="false"
+        />
+    <item
+        android:drawable="@drawable/ic_baseline_bookmark_24"
+        android:state_checked="true"
+        />
+    <item android:drawable="@drawable/ic_baseline_bookmark_border_24" />
+</selector>

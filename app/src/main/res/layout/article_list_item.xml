@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!--*******************************************************************************-->
+<!--    * © 2021 Copyright Aayamya Tech.                                           -->
+<!--    *                                                                          -->
+<!--*******************************************************************************-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_4dp"
+        android:background="@drawable/divider_line"
+        android:layout_marginLeft="@dimen/size_32dp"
+        android:layout_marginRight="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_16dp"
+        app:cardCornerRadius="@dimen/size_8dp">
+
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/size_200dp" />
+
+        <CheckBox
+            android:id="@+id/bookmark_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:button="@drawable/bookmark_button"
+            app:buttonTint="@color/primaryColor" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        style="@style/Theme.NewsBreeze.Headline5"
+        android:layout_marginLeft="@dimen/size_16dp"
+        android:layout_marginRight="@dimen/size_16dp" />
+
+    <TextView
+        android:id="@+id/article_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        style="@style/Theme.NewsBreeze.Body1"
+        android:layout_marginLeft="@dimen/size_16dp"
+        android:layout_marginRight="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_8dp"/>
+
+    <TextView
+        android:id="@+id/article_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8dp"
+        android:textColor="@android:color/darker_gray"
+        style="@style/Theme.NewsBreeze.Body2"
+        android:layout_marginLeft="@dimen/size_16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/article_read_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/size_8dp"
+            app:cornerRadius="@dimen/size_8dp"
+            android:text="Read" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/article_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/size_8dp"
+            app:cornerRadius="@dimen/size_8dp"
+            android:text="Save" />
+
+    </LinearLayout>
+
+</LinearLayout>
